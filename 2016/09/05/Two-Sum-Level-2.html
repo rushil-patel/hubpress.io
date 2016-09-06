@@ -12,7 +12,7 @@
 
     <link rel="shortcut icon" href="https://rushil-patel.github.io/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="//rushil-patel.github.io/themes/casper/assets/css/screen.css?v=1473126237282" />
+    <link rel="stylesheet" type="text/css" href="//rushil-patel.github.io/themes/casper/assets/css/screen.css?v=1473135131295" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
     <link rel="canonical" href="https://rushil-patel.github.io/2016/09/05/Two-Sum-Level-2.html" />
@@ -109,18 +109,70 @@ null
 <p>In the code above we start from the beginning of the list and check every pair of numbers moving towards the end of the list. Note, we are given a constraint <code>index1 &lt; index2</code> which is why the inner loop iterates from <code>i + 1</code>, this insures that one index is less than the other.</p>
 </div>
 <div class="paragraph">
-<p>The code above will run in <code>O(n^2)</code> time with <code>O(1)</code> space. For a problem like this <code>O(n^2)</code> is pretty poor performance. Also, note the code above doesn&#8217;t take advantage of the fact that the array is already sorted.</p>
+<p>The code above will run in <code>O(n^2)</code> time with <code>O(1)</code> space. For a problem like this <code>O(n^2)</code> is pretty poor performance.</p>
 </div>
 <div class="paragraph">
-<p>So can we do better?</p>
+<p>You may have noticed the code above doesn&#8217;t take advantage of the fact that the array is already sorted. We can do better!</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_pruning">Pruning</h2>
+<h2 id="_optimization_1">Optimization #1</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>We know that the array is already sorted, with this knowledge we can cut down the number of iterations executed. If we traverse the loops in the same fashion as above but we only continue incrementing if the sum of the numbers is less than the target. Once we reach a sum that is greater than the <code>target</code>, we can guarentee on the current iteration the other pair of numbers will also be greater than the sum because the array is ordered in increasing order. Thus, we have cut out some of the iterations.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>def two_sum(numbers, target):
+   current_sum = 0
+   for i in range(0, len(numbers) - 1):
+      for k in range(i + 1, len(numbers)):
+         current_sum = 0
+         if current_sum == target:
+            return [i, k]
+         elif current_sum &gt; target:
+            break
+         else:
+            continue
+   return [None, None]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above code is still <code>O(n^2)</code> but because this code will run <code>N^2</code> times if the target is the sum of the last two numbers. But on average case this code will perform better than the bruteforce above.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_optimization_2">Optimization #2</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s really make use of the fact that the array is sorted. In this approach we use two pointers starting on each end and step towards the middle of the array.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>def two_sum(numbers, target):
+   left = 0, right = len(numbers) - 1
+   current_sum = 0
+   while left &lt; right:
+   	  current_sum = numbers[left] + numbers[right]
+      if current_sum &gt; target:
+         right -= 1
+      elif current_sum &lt; target:
+         left += 1
+      else
+         return [left, right]
+   return [None, None]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This code uses the idea of convergance. Since we we start on the ends of the array we begin by finding the sum of the maximun and minimum values of the array. Notice that as the right pointer moves from the end of the array towards the middle the values decrease.
+In contrast as the left pointer moves from the beginning of the array to the middle the values increase. So if we find the sum of our two numbers to be greater than the target our only option is to move in a direction that would decrease the sum, thus we move the right pointer towards the middle of the array. Similarily, if we find the sum of the two numbers to be less than the target then we increase the sum, by moving the left pointer towards the middle.</p>
+</div>
+<div class="paragraph">
+<p>The solution has <code>O(n)</code> time complexity and O(1) space complexity.</p>
+</div>
 </div>
 </div>
         </section>
@@ -192,8 +244,8 @@ null
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/jquery.fitvids.js?v=1473126237282"></script>
-    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/index.js?v=1473126237282"></script>
+    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/jquery.fitvids.js?v=1473135131295"></script>
+    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/index.js?v=1473135131295"></script>
 
 </body>
 </html>
