@@ -1,2 +1,7 @@
 = Test
 == First Post
+[source python]
+---
+def find_duplicate():
+   
+---
