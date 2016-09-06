@@ -1,8 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 00:44:00 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Test]]></title><description><![CDATA[<div class="paragraph">
-<p>def find_duplicate():</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 01:40:23 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Two Sum @ Level 2]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>I found the <code>Two Sum</code> on <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted">leetcode</a> and thought I would give it a shot.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_problem_description">Problem Description</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.</p>
+</div>
+<div class="paragraph">
+<p>The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.</p>
+</div>
+<div class="paragraph">
+<p>Note: Allowed to assume that each input has exactly one solution.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_process">Process</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bruteforce">Bruteforce</h3>
+<div class="paragraph">
+<p>The obvious and naive way is to bruteforce. The general idea would be to keep generating a pair of numbers from the array until we get one that sums to our target value.</p>
+</div>
+<div class="paragraph">
+<p>In code it would look something like this</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre></pre>
+<pre>def two_sum(numbers, target):
+   for i in range(0, len(numbers) - 1):
+      for k in range(i + 1, len(numbers)):
+         if numbers[i] + numbers[k] == target:
+            return [i, k]
+   return [None, None]</pre>
 </div>
-</div>]]></description><link>https://rushil-patel.github.io/2016/09/05/Test.html</link><guid isPermaLink="true">https://rushil-patel.github.io/2016/09/05/Test.html</guid><category><![CDATA[coding_problems]]></category><dc:creator><![CDATA[Rushil Patel]]></dc:creator><pubDate>Mon, 05 Sep 2016 00:00:00 GMT</pubDate></item></channel></rss>
+</div>
+<div class="paragraph">
+<p>In the code above we start from the beginning of the list and check every pair of numbers moving towards the end of the list. Note, we are given a constraint <code>index1 &lt; index2</code> which is why the inner loop iterates from <code>i + 1</code>.</p>
+</div>
+<div class="paragraph">
+<p>The code above will run in <code>O(n^2)</code> time with <code>O(1)</code> space. For a problem like this <code>O(n^2)</code> is pretty poor performance. Also, note the code above doesn&#8217;t take advantage of the fact that the array is already sorted.</p>
+</div>
+<div class="paragraph">
+<p>So can we do better?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pruning">Pruning</h2>
+<div class="sectionbody">
+
+</div>
+</div>]]></description><link>https://rushil-patel.github.io/2016/09/05/Two-Sum-Level-2.html</link><guid isPermaLink="true">https://rushil-patel.github.io/2016/09/05/Two-Sum-Level-2.html</guid><category><![CDATA[coding_problems]]></category><category><![CDATA[ medium]]></category><dc:creator><![CDATA[Rushil Patel]]></dc:creator><pubDate>Mon, 05 Sep 2016 00:00:00 GMT</pubDate></item></channel></rss>
