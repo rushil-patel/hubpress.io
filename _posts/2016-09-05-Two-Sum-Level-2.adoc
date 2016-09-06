@@ -75,7 +75,7 @@ def two_sum(numbers, target):
    return [None, None]
 ----
 [[app-listing]]
-[source,ruby]
+[source,javascript]
 .app.rb
 ----
 require 'sinatra'
