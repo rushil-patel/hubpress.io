@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//rushil-patel.github.io/themes/ghostium/assets/css/main.min.css?v=1473137467225"/>
-    <link rel="stylesheet" href="//rushil-patel.github.io/themes/ghostium/assets/css/custom.css?v=1473137467225"/>
-    <link rel="stylesheet" href="//rushil-patel.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1473137467225"/>
+    <link rel="stylesheet" href="//rushil-patel.github.io/themes/ghostium/assets/css/main.min.css?v=1473137516588"/>
+    <link rel="stylesheet" href="//rushil-patel.github.io/themes/ghostium/assets/css/custom.css?v=1473137516588"/>
+    <link rel="stylesheet" href="//rushil-patel.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1473137516588"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//rushil-patel.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1473137467225"></script>
+    <script src="//rushil-patel.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1473137516588"></script>
 
     <link rel="canonical" href="https://rushil-patel.github.io/2016/09/05/Two-Sum.html" />
     <meta name="referrer" content="origin" />
@@ -191,13 +191,10 @@ null
 <div class="paragraph">
 <p>Note: Allowed to assume that each input has exactly one solution.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_process">Process</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_bruteforce">Bruteforce</h3>
+<h3 id="_process">Process</h3>
+<div class="sect3">
+<h4 id="_bruteforce">Bruteforce</h4>
 <div class="paragraph">
 <p>The obvious and naive way is to bruteforce. The general idea would be to keep generating a pair of numbers from the array until we get one that sums to our target value.</p>
 </div>
@@ -225,10 +222,8 @@ null
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_optimization_1">Optimization #1</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_optimization_1">Optimization #1</h3>
 <div class="paragraph">
 <p>We know that the array is already sorted, with this knowledge we can cut down the number of iterations executed. If we traverse the loops in the same fashion as above but we only continue incrementing if the sum of the numbers is less than the target. Once we reach a sum that is greater than the <code>target</code>, we can guarentee on the current iteration the other pair of numbers will also be greater than the sum because the array is ordered in increasing order. Thus, we have cut out some of the iterations.</p>
 </div>
@@ -252,10 +247,8 @@ null
 <p>The above code is still <code>O(n^2)</code> but because this code will run <code>N^2</code> times if the target is the sum of the last two numbers. But on average case this code will perform better than the bruteforce above.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_optimization_2">Optimization #2</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_optimization_2">Optimization #2</h3>
 <div class="paragraph">
 <p>Let&#8217;s really make use of the fact that the array is sorted. In this approach we use two pointers starting on each end and step towards the middle of the array. Have any clues?
 Hint: We can make the sum converge.</p>
@@ -282,6 +275,7 @@ In contrast as the left pointer moves from the beginning of the array to the mid
 </div>
 <div class="paragraph">
 <p>This solution has <code>O(n)</code> time complexity and <code>O(1)</code> space complexity.</p>
+</div>
 </div>
 </div>
 </div>
@@ -344,7 +338,7 @@ In contrast as the left pointer moves from the beginning of the array to the mid
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//rushil-patel.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1473137467225"></script>
+    <script src="//rushil-patel.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1473137516588"></script>
 
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
