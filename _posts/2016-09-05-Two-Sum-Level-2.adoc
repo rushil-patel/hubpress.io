@@ -78,4 +78,4 @@ def two_sum(numbers, target):
 Since we we start on the ends of the array we begin by finding the sum of the maximun and minimum values of the array. Notice that as the right pointer moves from the end of the array towards the middle the values decrease.
 In contrast as the left pointer moves from the beginning of the array to the middle the values increase. So if we find the sum of our two numbers to be greater than the target our only option is to move in a direction that would decrease the sum, thus we move the right pointer towards the middle of the array. Similarily, if we find the sum of the two numbers to be less than the target then we increase the sum, by moving the left pointer towards the middle.
 
-This solution has `O(n)` time complexity and O(1) space complexity. 
+This solution has `O(n)` time complexity and `O(1)` space complexity. 
