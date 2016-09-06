@@ -17,7 +17,7 @@ Note: Allowed to assume that each input has exactly one solution.
 The obvious and naive way is to bruteforce. The general idea would be to keep generating a pair of numbers from the array until we get one that sums to our target value.
 
 In code it would look something like this
-[source python]
+[source,python]
 ----
 def two_sum(numbers, target):
    for i in range(0, len(numbers) - 1):
@@ -37,7 +37,7 @@ You may have noticed the code above doesn't take advantage of the fact that the 
 
 We know that the array is already sorted, with this knowledge we can cut down the number of iterations executed. If we traverse the loops in the same fashion as above but we only continue incrementing if the sum of the numbers is less than the target. Once we reach a sum that is greater than the `target`, we can guarentee on the current iteration the other pair of numbers will also be greater than the sum because the array is ordered in increasing order. Thus, we have cut out some of the iterations.
 
-[source python]
+[source,python]
 ----
 def two_sum(numbers, target):
    current_sum = 0
@@ -59,7 +59,7 @@ The above code is still `O(n^2)` but because this code will run `N^2` times if t
 
 Let's really make use of the fact that the array is sorted. In this approach we use two pointers starting on each end and step towards the middle of the array. Have any clues?
 Hint: We can make the sum converge.
-[source python]
+[source,python]
 ----
 def two_sum(numbers, target):
    left = 0, right = len(numbers) - 1
