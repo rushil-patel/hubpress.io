@@ -1,3 +1,47 @@
 = Reverse a Singley Linked List
 
 :hp-tags: coding_problem
+
+=== Problem Description
+The task here is to write a function that will reverse a singly linked list. 
+The function will take a node, the head of the linked list. The function should return the head of the reversed linked list.
+
+=== Process
+Im only going focus on the iterative solution mainly because this is a relatively easy problem. The hardest part is executing the reversal in the correct order.
+
+Here is a basic Node class I defined for this problem.
+
+[source, java]
+----
+public class Node {
+   public int value;
+   public Node next;
+   
+   public Node(int value) {
+      this.value = value;
+      next = null;
+   }
+}
+----
+
+So the idea here is to traverse the linked list from head to tail and simultaneously reverse the links. In other words while we travel through the linked list we will switch the `next` pointers so that they point to the previous node rather than the next.
+
+We have to be careful now, if we set the next pointer of a node in the wrong order we will end up detaching the node from the rest of the list.
+
+[source,java]
+----
+public Node reverse(Node head) {
+   Node current = head;
+   Node previous = null;
+   Node next = null;
+   
+   while (current != null) {
+      
+      next = current.next;
+      current.next = previous;
+      
+      previous = current;
+      current = next;
+   }
+}
+----
