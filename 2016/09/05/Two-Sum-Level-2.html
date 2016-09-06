@@ -12,7 +12,7 @@
 
     <link rel="shortcut icon" href="https://rushil-patel.github.io/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="//rushil-patel.github.io/themes/casper/assets/css/screen.css?v=1473135418291" />
+    <link rel="stylesheet" type="text/css" href="//rushil-patel.github.io/themes/casper/assets/css/screen.css?v=1473135499130" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
     <link rel="canonical" href="https://rushil-patel.github.io/2016/09/05/Two-Sum-Level-2.html" />
@@ -167,6 +167,16 @@ Hint: We can make the sum converge.</p>
    return [None, None]</code></pre>
 </div>
 </div>
+<div id="app-listing" class="listingblock">
+<div class="title">app.rb</div>
+<div class="content">
+<pre class="highlight"><code class="language-ruby" data-lang="ruby">require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end</code></pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Since we we start on the ends of the array we begin by finding the sum of the maximun and minimum values of the array. Notice that as the right pointer moves from the end of the array towards the middle the values decrease.
 In contrast as the left pointer moves from the beginning of the array to the middle the values increase. So if we find the sum of our two numbers to be greater than the target our only option is to move in a direction that would decrease the sum, thus we move the right pointer towards the middle of the array. Similarily, if we find the sum of the two numbers to be less than the target then we increase the sum, by moving the left pointer towards the middle.</p>
@@ -245,8 +255,8 @@ In contrast as the left pointer moves from the beginning of the array to the mid
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/jquery.fitvids.js?v=1473135418291"></script>
-    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/index.js?v=1473135418291"></script>
+    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/jquery.fitvids.js?v=1473135499130"></script>
+    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/index.js?v=1473135499130"></script>
 
 </body>
 </html>
