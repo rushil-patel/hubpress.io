@@ -1,5 +1,5 @@
 = Two Sum
-:hp-tags: coding_problems, medium
+:hp-tags: coding_problem, medium
 
 This is my breakdown of the `Two Sum` problem. It can be found here on link:https://leetcode.com/problems/two-sum-ii-input-array-is-sorted[leetcode] and a bunch of other websites.
 
