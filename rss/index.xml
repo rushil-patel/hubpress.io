@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 04:12:11 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Two Sum @ Level 2]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 04:14:12 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Two Sum @ Level 2]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>This is my breakdown of the <code>Two Sum</code> problem. It can be found here on <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted">leetcode</a> and a bunch of other websites.</p>
@@ -83,7 +83,8 @@
 <h2 id="_optimization_2">Optimization #2</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Let&#8217;s really make use of the fact that the array is sorted. In this approach we use two pointers starting on each end and step towards the middle of the array.</p>
+<p>Let&#8217;s really make use of the fact that the array is sorted. In this approach we use two pointers starting on each end and step towards the middle of the array. Have any clues?
+Hint: We can make the sum converge.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -102,11 +103,11 @@
 </div>
 </div>
 <div class="paragraph">
-<p>This code uses the idea of convergance. Since we we start on the ends of the array we begin by finding the sum of the maximun and minimum values of the array. Notice that as the right pointer moves from the end of the array towards the middle the values decrease.
+<p>Since we we start on the ends of the array we begin by finding the sum of the maximun and minimum values of the array. Notice that as the right pointer moves from the end of the array towards the middle the values decrease.
 In contrast as the left pointer moves from the beginning of the array to the middle the values increase. So if we find the sum of our two numbers to be greater than the target our only option is to move in a direction that would decrease the sum, thus we move the right pointer towards the middle of the array. Similarily, if we find the sum of the two numbers to be less than the target then we increase the sum, by moving the left pointer towards the middle.</p>
 </div>
 <div class="paragraph">
-<p>The solution has <code>O(n)</code> time complexity and O(1) space complexity.</p>
+<p>This solution has <code>O(n)</code> time complexity and O(1) space complexity.</p>
 </div>
 </div>
 </div>]]></description><link>https://rushil-patel.github.io/2016/09/05/Two-Sum-Level-2.html</link><guid isPermaLink="true">https://rushil-patel.github.io/2016/09/05/Two-Sum-Level-2.html</guid><category><![CDATA[coding_problems]]></category><category><![CDATA[ medium]]></category><dc:creator><![CDATA[Rushil Patel]]></dc:creator><pubDate>Mon, 05 Sep 2016 00:00:00 GMT</pubDate></item></channel></rss>
