@@ -1,7 +1,7 @@
 = Two Sum @ Level 2
 :hp-tags: coding_problems, medium
 
-I found the `Two Sum` on link:https://leetcode.com/problems/two-sum-ii-input-array-is-sorted[leetcode] and thought I would give it a shot. 
+This is my breakdown of the `Two Sum` problem. It can be found here on link:https://leetcode.com/problems/two-sum-ii-input-array-is-sorted[leetcode] and a bunch of other websites.
 
 == Problem Description
 
