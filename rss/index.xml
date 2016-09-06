@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 04:14:12 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Two Sum @ Level 2]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 04:16:58 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Two Sum @ Level 2]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>This is my breakdown of the <code>Two Sum</code> problem. It can be found here on <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted">leetcode</a> and a bunch of other websites.</p>
@@ -32,12 +32,12 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>def two_sum(numbers, target):
+<pre class="highlight"><code class="language-python" data-lang="python">def two_sum(numbers, target):
    for i in range(0, len(numbers) - 1):
       for k in range(i + 1, len(numbers)):
          if numbers[i] + numbers[k] == target:
             return [i, k]
-   return [None, None]</pre>
+   return [None, None]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -60,7 +60,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>def two_sum(numbers, target):
+<pre class="highlight"><code class="language-python" data-lang="python">def two_sum(numbers, target):
    current_sum = 0
    for i in range(0, len(numbers) - 1):
       for k in range(i + 1, len(numbers)):
@@ -71,7 +71,7 @@
             break
          else:
             continue
-   return [None, None]</pre>
+   return [None, None]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -88,7 +88,7 @@ Hint: We can make the sum converge.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>def two_sum(numbers, target):
+<pre class="highlight"><code class="language-python" data-lang="python">def two_sum(numbers, target):
    left = 0, right = len(numbers) - 1
    current_sum = 0
    while left &lt; right:
@@ -99,7 +99,7 @@ Hint: We can make the sum converge.</p>
          left += 1
       else
          return [left, right]
-   return [None, None]</pre>
+   return [None, None]</code></pre>
 </div>
 </div>
 <div class="paragraph">
