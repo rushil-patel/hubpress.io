@@ -29,9 +29,52 @@ def two_sum(numbers, target):
 
 In the code above we start from the beginning of the list and check every pair of numbers moving towards the end of the list. Note, we are given a constraint `index1 < index2` which is why the inner loop iterates from `i + 1`, this insures that one index is less than the other.
 
-The code above will run in `O(n^2)` time with `O(1)` space. For a problem like this `O(n^2)` is pretty poor performance. Also, note the code above doesn't take advantage of the fact that the array is already sorted. 
+The code above will run in `O(n^2)` time with `O(1)` space. For a problem like this `O(n^2)` is pretty poor performance. 
 
-So can we do better?
+You may have noticed the code above doesn't take advantage of the fact that the array is already sorted. We can do better!
 
-== Pruning
+== Optimization #1
 
+We know that the array is already sorted, with this knowledge we can cut down the number of iterations executed. If we traverse the loops in the same fashion as above but we only continue incrementing if the sum of the numbers is less than the target. Once we reach a sum that is greater than the `target`, we can guarentee on the current iteration the other pair of numbers will also be greater than the sum because the array is ordered in increasing order. Thus, we have cut out some of the iterations.
+
+[source python]
+----
+def two_sum(numbers, target):
+   current_sum = 0
+   for i in range(0, len(numbers) - 1):
+      for k in range(i + 1, len(numbers)):
+         current_sum = 0
+         if current_sum == target:
+            return [i, k]
+         elif current_sum > target:
+            break
+         else:
+            continue
+   return [None, None]
+----
+
+The above code is still `O(n^2)` but because this code will run `N^2` times if the target is the sum of the last two numbers. But on average case this code will perform better than the bruteforce above.
+
+== Optimization #2
+
+Let's really make use of the fact that the array is sorted. In this approach we use two pointers starting on each end and step towards the middle of the array. 
+[source python]
+----
+def two_sum(numbers, target):
+   left = 0, right = len(numbers) - 1
+   current_sum = 0
+   while left < right:
+   	  current_sum = numbers[left] + numbers[right]
+      if current_sum > target:
+         right -= 1
+      elif current_sum < target:
+         left += 1
+      else
+         return [left, right]
+   return [None, None]
+----
+
+This code uses the idea of convergance. Since we we start on the ends of the array we begin by finding the sum of the maximun and minimum values of the array. Notice that as the right pointer moves from the end of the array towards the middle the values decrease.
+In contrast as the left pointer moves from the beginning of the array to the middle the values increase. So if we find the sum of our two numbers to be greater than the target our only option is to move in a direction that would decrease the sum, thus we move the right pointer towards the middle of the array. Similarily, if we find the sum of the two numbers to be less than the target then we increase the sum, by moving the left pointer towards the middle.
+
+The solution has `O(n)` time complexity and O(1) space complexity. 
