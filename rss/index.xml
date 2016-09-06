@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Code and eventually Data]]></title><description><![CDATA[The purpose of this blog is mostly to document my algorithm practice and interesting things I learn. For the most part the content will be algorithms and data science.]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 15:50:02 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Reverse a Singly Linked List]]></title><description><![CDATA[<div class="sect2">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Code and eventually Data]]></title><description><![CDATA[The purpose of this blog is mostly to document my algorithm practice and interesting things I learn. For the most part the content will be algorithms and data science.]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 22:08:27 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Reverse a Singly Linked List]]></title><description><![CDATA[<div class="sect2">
 <h3 id="_problem_description">Problem Description</h3>
 <div class="paragraph">
 <p>The task here is to write a function that will reverse a singly linked list.
@@ -88,7 +88,7 @@ The function will take a node, the head of the linked list. The function should 
    for i in range(0, len(numbers) - 1):
       for k in range(i + 1, len(numbers)):
          if numbers[i] + numbers[k] == target:
-            return [i, k]
+            return [i + 1, k + 1]
    return [None, None]</code></pre>
 </div>
 </div>
@@ -116,7 +116,7 @@ The function will take a node, the head of the linked list. The function should 
       for k in range(i + 1, len(numbers)):
          current_sum = 0
          if current_sum == target:
-            return [i, k]
+            return [i + 1, k + 1]
          elif current_sum &gt; target:
             break
          else:
@@ -146,7 +146,7 @@ Hint: We can make the sum converge.</p>
       elif current_sum &lt; target:
          left += 1
       else
-         return [left, right]
+         return [left + 1, right + 1]
    return [None, None]</code></pre>
 </div>
 </div>
