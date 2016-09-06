@@ -12,7 +12,7 @@
 
     <link rel="shortcut icon" href="https://rushil-patel.github.io/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="//rushil-patel.github.io/themes/casper/assets/css/screen.css?v=1473135252281" />
+    <link rel="stylesheet" type="text/css" href="//rushil-patel.github.io/themes/casper/assets/css/screen.css?v=1473135418291" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
     <link rel="canonical" href="https://rushil-patel.github.io/2016/09/05/Two-Sum-Level-2.html" />
@@ -97,12 +97,12 @@ null
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>def two_sum(numbers, target):
+<pre class="highlight"><code class="language-python" data-lang="python">def two_sum(numbers, target):
    for i in range(0, len(numbers) - 1):
       for k in range(i + 1, len(numbers)):
          if numbers[i] + numbers[k] == target:
             return [i, k]
-   return [None, None]</pre>
+   return [None, None]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -125,7 +125,7 @@ null
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>def two_sum(numbers, target):
+<pre class="highlight"><code class="language-python" data-lang="python">def two_sum(numbers, target):
    current_sum = 0
    for i in range(0, len(numbers) - 1):
       for k in range(i + 1, len(numbers)):
@@ -136,7 +136,7 @@ null
             break
          else:
             continue
-   return [None, None]</pre>
+   return [None, None]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -153,7 +153,7 @@ Hint: We can make the sum converge.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>def two_sum(numbers, target):
+<pre class="highlight"><code class="language-python" data-lang="python">def two_sum(numbers, target):
    left = 0, right = len(numbers) - 1
    current_sum = 0
    while left &lt; right:
@@ -164,7 +164,7 @@ Hint: We can make the sum converge.</p>
          left += 1
       else
          return [left, right]
-   return [None, None]</pre>
+   return [None, None]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -245,8 +245,8 @@ In contrast as the left pointer moves from the beginning of the array to the mid
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/jquery.fitvids.js?v=1473135252281"></script>
-    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/index.js?v=1473135252281"></script>
+    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/jquery.fitvids.js?v=1473135418291"></script>
+    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/index.js?v=1473135418291"></script>
 
 </body>
 </html>
