@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Code and eventually Data]]></title><description><![CDATA[The purpose of this blog is mostly to document my algorithm practice and interesting things I learn. For the most part the content will be algorithms and data science.]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 04:51:07 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Two Sum]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Code and eventually Data]]></title><description><![CDATA[The purpose of this blog is mostly to document my algorithm practice and interesting things I learn. For the most part the content will be algorithms and data science.]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 04:51:56 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Two Sum]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>This is my breakdown of the <code>Two Sum</code> problem. It can be found here on <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted">leetcode</a> and a bunch of other websites.</p>
@@ -17,13 +17,10 @@
 <div class="paragraph">
 <p>Note: Allowed to assume that each input has exactly one solution.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_process">Process</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_bruteforce">Bruteforce</h3>
+<h3 id="_process">Process</h3>
+<div class="sect3">
+<h4 id="_bruteforce">Bruteforce</h4>
 <div class="paragraph">
 <p>The obvious and naive way is to bruteforce. The general idea would be to keep generating a pair of numbers from the array until we get one that sums to our target value.</p>
 </div>
@@ -51,10 +48,8 @@
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_optimization_1">Optimization #1</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_optimization_1">Optimization #1</h3>
 <div class="paragraph">
 <p>We know that the array is already sorted, with this knowledge we can cut down the number of iterations executed. If we traverse the loops in the same fashion as above but we only continue incrementing if the sum of the numbers is less than the target. Once we reach a sum that is greater than the <code>target</code>, we can guarentee on the current iteration the other pair of numbers will also be greater than the sum because the array is ordered in increasing order. Thus, we have cut out some of the iterations.</p>
 </div>
@@ -78,10 +73,8 @@
 <p>The above code is still <code>O(n^2)</code> but because this code will run <code>N^2</code> times if the target is the sum of the last two numbers. But on average case this code will perform better than the bruteforce above.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_optimization_2">Optimization #2</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_optimization_2">Optimization #2</h3>
 <div class="paragraph">
 <p>Let&#8217;s really make use of the fact that the array is sorted. In this approach we use two pointers starting on each end and step towards the middle of the array. Have any clues?
 Hint: We can make the sum converge.</p>
@@ -108,6 +101,7 @@ In contrast as the left pointer moves from the beginning of the array to the mid
 </div>
 <div class="paragraph">
 <p>This solution has <code>O(n)</code> time complexity and <code>O(1)</code> space complexity.</p>
+</div>
 </div>
 </div>
 </div>]]></description><link>https://rushil-patel.github.io/2016/09/05/Two-Sum.html</link><guid isPermaLink="true">https://rushil-patel.github.io/2016/09/05/Two-Sum.html</guid><category><![CDATA[coding_problems]]></category><category><![CDATA[ medium]]></category><dc:creator><![CDATA[Rushil Patel]]></dc:creator><pubDate>Mon, 05 Sep 2016 00:00:00 GMT</pubDate></item></channel></rss>
