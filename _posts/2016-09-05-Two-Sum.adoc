@@ -23,7 +23,7 @@ def two_sum(numbers, target):
    for i in range(0, len(numbers) - 1):
       for k in range(i + 1, len(numbers)):
          if numbers[i] + numbers[k] == target:
-            return [i, k]
+            return [i + 1, k + 1]
    return [None, None]
 ----
 
@@ -45,7 +45,7 @@ def two_sum(numbers, target):
       for k in range(i + 1, len(numbers)):
          current_sum = 0
          if current_sum == target:
-            return [i, k]
+            return [i + 1, k + 1]
          elif current_sum > target:
             break
          else:
@@ -71,7 +71,7 @@ def two_sum(numbers, target):
       elif current_sum < target:
          left += 1
       else
-         return [left, right]
+         return [left + 1, right + 1]
    return [None, None]
 ----
 
