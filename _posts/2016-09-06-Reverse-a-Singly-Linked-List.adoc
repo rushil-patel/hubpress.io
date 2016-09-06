@@ -1,4 +1,4 @@
-= Reverse a Singley Linked List
+= Reverse a Singly Linked List
 
 :hp-tags: coding_problem
 
@@ -26,7 +26,7 @@ public class Node {
 
 So the idea here is to traverse the linked list from head to tail and simultaneously reverse the links. In other words while we travel through the linked list we will switch the `next` pointers so that they point to the previous node rather than the next.
 
-We have to be careful now, if we set the next pointer of a node in the wrong order we will end up detaching the node from the rest of the list.
+We have to be careful, if we set the next pointer of a node in the wrong order we will end up detaching the node from the rest of the list. To work around this, we can save the `current.next` node into our `next` node to hold onto the reference. Then we set `current.next` to the `previous node`, this is in effect reversing the links between the nodes. And then finally we advance the current node by setting the `current` node to `next`, remember we saved `current.next` into `next` so we are good.
 
 [source,java]
 ----
@@ -45,3 +45,5 @@ public Node reverse(Node head) {
    }
 }
 ----
+
+This solution will run in O(n) time and O(1) space.
