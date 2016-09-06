@@ -1,7 +1,37 @@
-= Test
-:hp-tags: coding_problems
+= Two Sum @ Level 2
+:hp-tags: coding_problems, medium
+
+I found the `Two Sum` on link:https://leetcode.com/problems/two-sum-ii-input-array-is-sorted[leetcode] and thought I would give it a shot. 
+
+== Problem Description
+
+Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
+
+The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.
+
+Note: Allowed to assume that each input has exactly one solution.
+
+== Process
+
+=== Bruteforce
+The obvious and naive way is to bruteforce. The general idea would be to keep generating a pair of numbers from the array until we get one that sums to our target value.
+
+In code it would look something like this
 [source python]
 ----
-def find_duplicate():
-   
+def two_sum(numbers, target):
+   for i in range(0, len(numbers) - 1):
+      for k in range(i + 1, len(numbers)):
+         if numbers[i] + numbers[k] == target:
+            return [i, k]
+   return [None, None]
 ----
+
+In the code above we start from the beginning of the list and check every pair of numbers moving towards the end of the list. Note, we are given a constraint `index1 < index2` which is why the inner loop iterates from `i + 1`.
+
+The code above will run in `O(n^2)` time with `O(1)` space. For a problem like this `O(n^2)` is pretty poor performance. Also, note the code above doesn't take advantage of the fact that the array is already sorted. 
+
+So can we do better?
+
+== Pruning
+
