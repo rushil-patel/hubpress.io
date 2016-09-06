@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 01:40:23 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Two Sum @ Level 2]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>https://rushil-patel.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Sep 2016 01:42:20 GMT</lastBuildDate><atom:link href="https://rushil-patel.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Two Sum @ Level 2]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>I found the <code>Two Sum</code> on <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted">leetcode</a> and thought I would give it a shot.</p>
+<p>This is my breakdown of the <code>Two Sum</code> problem. It can be found here on <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted">leetcode</a> and a bunch of other websites.</p>
 </div>
 </div>
 </div>
