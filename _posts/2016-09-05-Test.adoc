@@ -1,7 +1,7 @@
 = Test
-== First Post
+:hp-tags: coding_problems
 [source python]
----
+----
 def find_duplicate():
    
----
+----
