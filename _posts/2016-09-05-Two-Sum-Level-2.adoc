@@ -57,7 +57,8 @@ The above code is still `O(n^2)` but because this code will run `N^2` times if t
 
 == Optimization #2
 
-Let's really make use of the fact that the array is sorted. In this approach we use two pointers starting on each end and step towards the middle of the array. 
+Let's really make use of the fact that the array is sorted. In this approach we use two pointers starting on each end and step towards the middle of the array. Have any clues?
+Hint: We can make the sum converge.
 [source python]
 ----
 def two_sum(numbers, target):
@@ -74,7 +75,7 @@ def two_sum(numbers, target):
    return [None, None]
 ----
 
-This code uses the idea of convergance. Since we we start on the ends of the array we begin by finding the sum of the maximun and minimum values of the array. Notice that as the right pointer moves from the end of the array towards the middle the values decrease.
+Since we we start on the ends of the array we begin by finding the sum of the maximun and minimum values of the array. Notice that as the right pointer moves from the end of the array towards the middle the values decrease.
 In contrast as the left pointer moves from the beginning of the array to the middle the values increase. So if we find the sum of our two numbers to be greater than the target our only option is to move in a direction that would decrease the sum, thus we move the right pointer towards the middle of the array. Similarily, if we find the sum of the two numbers to be less than the target then we increase the sum, by moving the left pointer towards the middle.
 
-The solution has `O(n)` time complexity and O(1) space complexity. 
+This solution has `O(n)` time complexity and O(1) space complexity. 
