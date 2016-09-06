@@ -27,7 +27,7 @@ def two_sum(numbers, target):
    return [None, None]
 ----
 
-In the code above we start from the beginning of the list and check every pair of numbers moving towards the end of the list. Note, we are given a constraint `index1 < index2` which is why the inner loop iterates from `i + 1`.
+In the code above we start from the beginning of the list and check every pair of numbers moving towards the end of the list. Note, we are given a constraint `index1 < index2` which is why the inner loop iterates from `i + 1`, this insures that one index is less than the other.
 
 The code above will run in `O(n^2)` time with `O(1)` space. For a problem like this `O(n^2)` is pretty poor performance. Also, note the code above doesn't take advantage of the fact that the array is already sorted. 
 
