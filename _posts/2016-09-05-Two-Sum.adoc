@@ -3,7 +3,7 @@
 
 This is my breakdown of the `Two Sum` problem. It can be found here on link:https://leetcode.com/problems/two-sum-ii-input-array-is-sorted[leetcode] and a bunch of other websites.
 
-== Problem Description
+=== Problem Description
 
 Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
 
