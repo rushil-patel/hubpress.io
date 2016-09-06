@@ -5,8 +5,6 @@
     "branch": "master"
     
   },
-  "title": "Code and eventually Data",
-  "description": "The purpose of this blog is mostly to document my algorithm practice and interesting things I learn. For the most part the content will be algorithms and data science.",
   "theme": {
     "name": "Casper"
   }
