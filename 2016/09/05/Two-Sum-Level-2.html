@@ -12,7 +12,7 @@
 
     <link rel="shortcut icon" href="https://rushil-patel.github.io/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="//rushil-patel.github.io/themes/casper/assets/css/screen.css?v=1473135131295" />
+    <link rel="stylesheet" type="text/css" href="//rushil-patel.github.io/themes/casper/assets/css/screen.css?v=1473135252281" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
     <link rel="canonical" href="https://rushil-patel.github.io/2016/09/05/Two-Sum-Level-2.html" />
@@ -148,7 +148,8 @@ null
 <h2 id="_optimization_2">Optimization #2</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Let&#8217;s really make use of the fact that the array is sorted. In this approach we use two pointers starting on each end and step towards the middle of the array.</p>
+<p>Let&#8217;s really make use of the fact that the array is sorted. In this approach we use two pointers starting on each end and step towards the middle of the array. Have any clues?
+Hint: We can make the sum converge.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -167,11 +168,11 @@ null
 </div>
 </div>
 <div class="paragraph">
-<p>This code uses the idea of convergance. Since we we start on the ends of the array we begin by finding the sum of the maximun and minimum values of the array. Notice that as the right pointer moves from the end of the array towards the middle the values decrease.
+<p>Since we we start on the ends of the array we begin by finding the sum of the maximun and minimum values of the array. Notice that as the right pointer moves from the end of the array towards the middle the values decrease.
 In contrast as the left pointer moves from the beginning of the array to the middle the values increase. So if we find the sum of our two numbers to be greater than the target our only option is to move in a direction that would decrease the sum, thus we move the right pointer towards the middle of the array. Similarily, if we find the sum of the two numbers to be less than the target then we increase the sum, by moving the left pointer towards the middle.</p>
 </div>
 <div class="paragraph">
-<p>The solution has <code>O(n)</code> time complexity and O(1) space complexity.</p>
+<p>This solution has <code>O(n)</code> time complexity and O(1) space complexity.</p>
 </div>
 </div>
 </div>
@@ -244,8 +245,8 @@ In contrast as the left pointer moves from the beginning of the array to the mid
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/jquery.fitvids.js?v=1473135131295"></script>
-    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/index.js?v=1473135131295"></script>
+    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/jquery.fitvids.js?v=1473135252281"></script>
+    <script type="text/javascript" src="//rushil-patel.github.io/themes/casper/assets/js/index.js?v=1473135252281"></script>
 
 </body>
 </html>
